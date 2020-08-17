@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/mainmenu.css">
+        <meta charset="utf-8">
+        <script type="text/javascript" charset="utf-8">
+            function exitFromApp(){
+                w.close();
+            }
+        </script>
+        
+    </head>
+
+    <body>
+        <!-- <div id="menuroot"></div> -->
+        <div class="center">
+            <div class="top-banner">
+                <div><img src="../css/logo.png" alt="" class="logo"></div>
+                
+            </div>
+            <div class="center-content">
+                <div class="button-containers">
+                    <button onclick="window.location.href='./manualForm.html'" id='ingreso-manual'>Ingreso Formulario Empaque</button>
+                </div>
+                <div class="button-containers">
+                    <button onclick="window.location.href='./vulcanizado.html'" id='ingreso-manual'>Ingreso Formulario Prensa</button>
+
+                </div>
+                <div class="button-containers">
+                    <button onclick="window.location.href='./salary.html'">Estadísticas</button>
+                </div>
+                <div class="button-containers" onload="onLoad();">
+                    <button name="exit" onclick="exitFromApp()">Salir</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="side">
+            <div class="side-banner"></div>
+        </div>
+        <div id="root"></div>
+        
+        <script src="../js/mainmenu.js"></script>
+    </body>
+    
+
+</html>
