@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+			<link rel="stylesheet" href="../css/normalize.css">
+      <link rel="stylesheet" href="../css/vulcanizado.css">
+			<title>Ingreso manual</title>
+	</head>
+	<body>
+		<div class="Pagina__principal">
+			<div class="Contenido"></div>
+				<div class="Contenido__principal">
+					<div class="Encabezado__contenido">
+						<div class="Cuadro_de_titulo">
+							<h2>Ingreso manual</h2>
+						</div>
+					</div>
+					<div class="Formulario">
+						<h1>Formulario</h1>
+						<div class="Cuadro_de_ingreso">
+							<div class="content">
+								<div class="f1">
+									<h2>No. Formulario:</h2>
+									<input type="number" id="numero-formulario"  >
+									
+									<h2>Fecha:</h2>
+									<input type="date" id="fecha"  >
+									<h2>Semana:</h2>
+									<input type="number" id="semana" min="1" max="53"  >
+									<h2>Mes:</h2>
+									<input type="number" id="mes" min="1" max="12"  >
+									<h2>Codigo Operador:</h2>
+									<select name="operador" id="operador-id">
+										<option value=" "> </option>
+										<option value="4">4</option>
+										<option value="24">24</option>
+										<option value="35">35</option>
+										<option value="300290">300290</option>
+										<option value="300689">300689</option>
+										<option value="300791">300791</option>
+										<option value="52">52</option>
+										<option value="53">53</option>
+										<option value="54">54</option>
+										<option value="T013">T013</option>
+									</select>
+									<h2>Codigo Producto:</h2>
+                                    <input type="number" id="producto-id" min="7220" max="9063"  >
+                                    <h2>Codigo Prensa:</h2>
+									<input type="number" id="prensa-id" min="1" max="30"  >
+									<h2>Cargas Programadas</h2>
+									<input type="number" id="cargas-program" min="0"  >
+									<h2>Producto Defecto</h2>
+									<input type="number" id="producto-defecto" min="0"  >
+									<h2>En Buen Estado</h2>
+									<input type="number" id="buen-estado" min="0">														  	
+									<h2>Cargas Faltantes</h2>
+									<input type="number" id="cargas-faltantes" min="0"  >
+									<h2>Total Cargas</h2>
+									<input type="number" id="total-cargas" min="0">														  	
+									
+								</div>
+								<div class="f2">
+									<h2>Porcentaje Cumplimiento Total</h2>
+									<input type="number" id="porcentaje_cump_total" min="0"  >
+									<h2>Porcentaje Buen Estado</h2>
+									<input type="number" id="porcentaje_buen_estado" min="0"  >
+									<h2>Peso a Producir</h2>
+									<input type="number" id="peso_producir" min="0"  >
+									<h2>Peso producido</h2>
+									<input type="number" id="peso_producido" min="0"  >
+									<h2>Faltante</h2>
+									<input type="number" id="faltante" min="0"  >
+									<h2>Rebaba</h2>
+									<input type="number" id="rebaba" min="0"  >
+									<h2>Porcentaje Rebaba</h2>
+									<input type="number" id="porcentaje_rebaba" min="0"  >
+									<h2>Cumplimiento KG</h2>
+									<input type="number" id="cumplimiento_kg" min="0"  >
+									<h2>Motivo de paro</h2>
+									<select id="paro">
+										<option value=" "> </option>
+										<option value="M001">M001</option>
+										<option value="M096">M096</option>
+										<option value="M127">M127</option>
+										<option value="M129">M129</option>
+										<option value="M130">M130</option>
+										<option value="M131">M131</option>
+										<option value="M132">M132</option>
+										<option value="M133">M133</option>
+										<option value="M134">M134</option>
+										<option value="M135">M135</option>
+										<option value="M136">M136</option>
+										<option value="M137">M137</option>
+										<option value="M138">M138</option>
+										<option value="M139">M139</option>
+										<option value="M140">M140</option>
+									</select>
+									<h2>Tiempo Real</h2>
+                                    <input type="number" id="tiempo_real" min="0"  >
+                                    <h2>Tiempo no Utilizado</h2>
+                                    <input type="number" id="tiempo_no_utilizado" min="0"  >
+                                    <h2>KwH</h2>
+									<input type="number" id="kwh" min=0  >
+
+								</div>
+							</div>	
+							<div class="buttonBox">
+								<button class="Generar_formulario" id="form-button" onclick="ingresarFormV()">Generar</button>							
+								<button class="Generar_formulario" onclick="window.location.href='./mainmenu.html'">Regresar</button>
+							</div>
+						</div>				
+					</div>
+				</div>
+			</div>
+        </div>
+		<script src="../js/formularios.js">
+		function ingresarFormV(){
+			var numero_formulario = document.getElementById('numero-formulario').value
+			var fecha = document.getElementById('fecha').value
+			var semana = document.getElementById('semana').value
+			var mes = document.getElementById('mes').value
+			var codigo_operador = document.getElementById('operador-id').value
+			var codigo_producto = document.getElementById('producto-id').value
+			var codigo_prensa = document.getElementById('prensa-id').value
+			var cargas_program = document.getElementById('cargas-program').value
+			var producto_defecto = document.getElementById('producto-defecto').value
+			var buen_estado = document.getElementById('buen-estado').value
+			var total_cargas = document.getElementById('total-cargas').value
+			var cargas_faltantes = document.getElementById('cargas-faltantes').value
+			// fin primera col.
+			var porcentaje_cump_total = document.getElementById('porcentaje_cump_total').value // double
+			var porcentaje_buen_estado = document.getElementById('porcentaje_buen_estado').value // double
+			var porcentaje_rebaba = document.getElementById('porcentaje_rebaba').value // double
+			var paro_id = document.getElementById('paro').value
+			var peso_producir = document.getElementById('peso_producir').value // decimal
+			var peso_producido = document.getElementById('peso_producido').value// decimal
+			var faltante = document.getElementById('faltante').value // decimal
+			var rebaba = document.getElementById('rebaba').value // decimal
+			var cumplimiento_kg = document.getElementById('cumplimiento_kg').value // double
+			var tiempo_real = document.getElementById('tiempo_real').value // int
+			var tiempo_no_utilizado = document.getElementById('tiempo_no_utilizado').value // int
+			var kwh = document.getElementById('kwh').value // int
+
+			if(numero_formulario != "" && fecha != "" && semana != "" && mes != "" && codigo_operador != "" && codigo_producto != "" && codigo_prensa != "" && cargas_program != "" && producto_defecto != "" && buen_estado != "" && total_cargas != "" && cargas_faltantes != "" && porcentaje_cump_total != "" && porcentaje_buen_estado != "" && peso_producir != "" && peso_producido != "" && faltante != "" && rebaba != "" && porcentaje_rebaba != "" && cumplimiento_kg != "" && paro_id != "" && tiempo_real != "" && tiempo_no_utilizado != "" && kwh != "")
+			{
+				vulcanizados.create({
+					numero_formulario : numero_formulario,
+					fecha : fecha,
+					semana : semana,
+					mes : mes,
+					codigo_operador : codigo_operador,
+					codigo_producto : codigo_producto,
+					codigo_prensa : codigo_prensa,
+					cargas_program : cargas_program,
+					producto_defecto : producto_defecto,
+					buen_estado : buen_estado,
+					total_cargas : total_cargas,
+					cargas_faltantes : cargas_faltantes,
+					// fin primera col.
+					porcentaje_cump_total : porcentaje_cump_total, // double
+					porcentaje_buen_estado : porcentaje_buen_estado, // double
+					porcentaje_rebaba : porcentaje_rebaba, // double
+					paro_id : paro_id,
+					peso_producir : peso_producir, // decimal
+					peso_producido : peso_producido,// decimal
+					faltante : faltante, // decimal
+					rebaba : rebaba, // decimal
+					cumplimiento_kg : cumplimiento_kg, // double
+					tiempo_real : tiempo_real, // int
+					tiempo_no_utilizado : tiempo_no_utilizado, // int
+					kwh : kwh, // int
+				})
+				alert("Formulario ingresado")
+				location.reload();
+			}
+			else
+			{
+				alert("Uno o mas campos estan vacios.");
+				location.reload();
+			}
+			
+		}
+		</script>
+	</body>
+</html>

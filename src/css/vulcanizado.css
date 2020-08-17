@@ -1,0 +1,183 @@
+html, body {
+	font-size: 4px;
+	font-family: sans-serif;
+	height: 100%;
+}
+body {
+background-color: #f1f6f6;
+}
+
+/*.Pagina__principal {
+	height: 100%;
+}*/
+
+.Contrasenas__imagen {
+	background: url('images/unlock.jpg') no-repeat;
+	padding: 2rem 1rem 5rem 1rem;
+	width: 5rem;
+}
+
+
+.Contenido {
+	background: #f1f6f6;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 150%;
+}
+
+.menu_de_opciones {
+	position: fixed;
+	background: greenyellow;
+	width: 10%;
+	height: 100%;
+}
+
+li{
+color: #747e7e;
+font-size: 4rem;
+padding: 5rem 16rem 5rem 0rem;
+}
+
+.Contenido__principal {
+	align-items: stretch;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.Encabezado__contenido {
+	align-items: baseline;
+	background: rgb(130, 191, 248);;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: 10%;
+}
+
+.Cuadro_de_titulo {
+	background: rgb(58, 156, 248);
+	margin-top: 0px;
+	width: 50%;
+	height: 50%;
+}
+
+.Cuadro_de_titulo h2 {
+	color: white;
+	font-family: sans-serif;
+	font-weight: 100;
+	font-size: 10rem;	
+	margin-top: 0px;
+	margin-left: 300px;
+}
+
+.Formulario {
+	background: whitesmoke;
+	margin-bottom: 0px;
+	width: 100%;
+	height: 50%;
+}
+
+.Formulario h1{
+	color: black;
+	font-family: sans-serif;
+	font-weight: 100;
+	font-size: 10rem;	
+	margin-top: 20px;
+	text-align: center;
+}
+
+.Cuadro_de_ingreso {
+	position: relative;	
+	background: rgb(197, 197, 197);
+	margin-left: 10%;
+	margin-right: 10%;
+	height: 117%;
+	left: 50px;
+	width: 75%;
+}
+.content{
+	display: flex;
+}
+.buttonBox{
+	display: flex;
+}
+.Cuadro_de_ingreso h2 {
+	color: black;
+	font-family: sans-serif;
+	font-weight: 100;
+	font-size: 4rem;	
+	margin-top: 5rem;
+	margin-left: 10rem;
+}
+
+input {
+	background: white;
+	margin-left: 10rem;
+	margin-right: 10rem;
+	height: 3.5%;
+	width: 40%;
+	font-size: 350%;
+}
+
+input[type=number] {
+	background: white;
+	margin-left: 10rem;
+	margin-right: 10rem;
+	width: 15%;
+	font-size: 350%;
+}
+
+select{
+	background: white;
+	margin-left: 10rem;
+	margin-right: 10rem;
+	height: 4%;
+	width: 40%;
+	font-size: 400%;
+}
+
+.Generar_formulario {
+	background: rgb(58, 156, 248);
+	color: white;
+	border: none;
+	font-family: sans-serif;
+	font-weight: 100;
+	font-size: 6rem;
+	border-radius: 5px;
+	height: 5%;
+	padding: 10px 10px 30px 10px;
+	margin-top: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	bottom: auto;	
+}
+
+.usuario__imagen {
+	background: url('icon4.jpeg') no-repeat;
+	width: 5rem;
+	height: 5rem;
+	padding: 1rem 2rem 0rem 1rem;
+}
+
+.Usuario__imagen {
+	background: url('images/down_arrow.png') no-repeat;
+	padding: 1rem 2rem 3rem 0rem;
+	width: 10rem;
+}
+
+.Agregar_paquete__imagen {
+	background: url('images/agregar_paquete.png') no-repeat;
+	justify-content: center;
+	padding: 10rem 10rem 10rem 50rem;
+}
+.f2{
+	width: 50%;
+	height: 100%;
+}
+
+.f1{
+	width: 50%;
+	height: 100%;
+}
+
