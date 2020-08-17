@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+			<link rel="stylesheet" href="../css/normalize.css">
+      <link rel="stylesheet" href="../css/manualForm.css">
+			<title>Ingreso manual</title>
+	</head>
+	<body>
+		<div class="Pagina__principal">
+			<div class="Contenido">
+				<div class="menu_de_opciones">
+					<ul style="list-style-type:none;">
+						<li><div class="usuario__imagen"></div></li>
+						<li><div class="scanner__imagen"></div></li>
+						<li><div class="dinero__imagen"></div></li>
+						<li><div class="estadisticas__imagen"></div></li>
+					</ul>
+					<div class="menu_de_opciones__pie_de_pagina">
+						<div class="salir__imagen"></div>
+					</div>
+				</div>
+				<div class="Contenido__principal">
+					<div class="Encabezado__contenido">
+						<div class="Cuadro_de_titulo">
+							<h2>Ingreso manual</h2>
+						</div>
+					</div>
+					<div class="Formulario">
+						<h1>Formulario</h1>
+						<div class="Cuadro_de_ingreso">
+							<div class="content">
+								<div class="f1">
+									<h2>No. Formulario:</h2>
+									<input type="number" id="num">									
+									<h2>Fecha:</h2>
+									<input type="date" id="fecha">
+									<h2>Semana:</h2>
+									<input type="number" id="semana" min="1" max="53">
+									<h2>Mes:</h2>
+									<input type="number" id="mes" min="1" max="12">
+									<h2>Codigo Operador:</h2>
+									<select name="operador" id="operador">
+										<option value=" "> </option>
+										<option value="4">4</option>
+										<option value="24">24</option>
+										<option value="35">35</option>
+										<option value="300290">300290</option>
+										<option value="300689">300689</option>
+										<option value="300791">300791</option>
+										<option value="52">52</option>
+										<option value="53">53</option>
+										<option value="54">54</option>
+										<option value="T013">T013</option>
+									</select>
+									<h2>Codigo Producto:</h2>
+									<input type="number" id="producto" min="7220" max="9063">
+									<h2>Total Producto</h2>
+									<input type="number" id="totalProd" min="0">
+									<h2>Total Peso</h2>
+									<input type="number" id="totalPeso" min="0">
+									<h2>Primeras</h2>
+									<input type="number" id="primeras" min="0">	
+									<h2>Peso producido primeras</h2>
+									<input type="number" id="pesoProdPrim" min="0">														
+									
+								</div>
+								<div class="f2">									
+									<h2>Cumplimiento prima (porcentaje)</h2>
+									<input type="number" id="cumplimientoPrim" min="0">
+									<h2>Segundas</h2>
+									<input type="number" id="segundas" min="0">
+									<h2>Peso producido segundas</h2>
+									<input type="number" id="pesoProdSeg" min="0">
+									<h2>Cumplimiento Segundas</h2>
+									<input type="number" id="cumplimientoSeg" min="0">
+									<h2>Terceras</h2>
+									<input type="number" id="terceras" min="0">
+									<h2>Peso producido terceras</h2>
+									<input type="number" id="pesoProdTer" min="0">
+									<h2>Cumplimiento Terceras</h2>
+									<input type="number" id="cumplimientoTer" min="0">
+									<h2>Motivo de paro</h2>
+									<select id="paro">
+										<option value=" "> </option>
+										<option value="M001">M001</option>
+										<option value="M096">M096</option>
+										<option value="M127">M127</option>
+										<option value="M129">M129</option>
+										<option value="M130">M130</option>
+										<option value="M131">M131</option>
+										<option value="M132">M132</option>
+										<option value="M133">M133</option>
+										<option value="M134">M134</option>
+										<option value="M135">M135</option>
+										<option value="M136">M136</option>
+										<option value="M137">M137</option>
+										<option value="M138">M138</option>
+										<option value="M139">M139</option>
+										<option value="M140">M140</option>
+									</select>
+									<h2>Numero de diario</h2>
+									<input type="text" id="noDiario">
+
+								</div>
+							</div>	
+							<div class="buttonFlex">
+								<button class="Generar_formulario" id="ingresar" onclick="ingresarForm()">Ingresar Formulario</button>						
+								<button class="Generar_formulario" onclick="window.location.href='./mainmenu.html'">Regresar</button>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/empaque.js">
+		function ingresarForm(){
+			var noFormulario = document.getElementById('num').value;
+			var fecha = document.getElementById('fecha').value;
+			var semana = document.getElementById('semana').value;
+			var mes = document.getElementById('mes').value;
+			var codigoOp = document.getElementById('operador').value;
+			var codioProd = document.getElementById('producto').value;
+			var totalPeso = document.getElementById('totalPeso').value;
+			var totalProd = document.getElementById('totalProd').value;
+			var primeras = document.getElementById('primeras').value;
+			var pesoProdPrim = document.getElementById('pesoProdPrim').value;
+			var cumplimientoPrim = document.getElementById('cumplimientoPrim').value;
+			var segundas = document.getElementById('segundas').value;
+			var pesoProdSeg = document.getElementById('pesoProdSeg').value;
+			var cumplimientoSeg = document.getElementById('cumplimientoSeg').value;
+			var terceras = document.getElementById('terceras').value;
+			var pesoProdTer = document.getElementById('pesoProdTer').value;
+			var cumplimientoTer = document.getElementById('cumplimientoTer').value;
+			var motivoParo = document.getElementById('paro').value;
+			var noDiario = document.getElementById('noDiario').value;
+
+			if(noFormulario != null && fecha != null && semana != null && mes != null && codigoOp != null && codioProd != null && totalPeso != null && totalProd != null && primeras != null && pesoProdPrim != null && cumplimientoPrim != null && segundas != null && pesoProdSeg != null && cumplimientoSeg != null && terceras != null && pesoProdTer != null && cumplimientoTer != null && motivoParo != null && noDiario != null)
+			{
+				Empaque.create({
+					id: noFormulario,
+					semana: semana,
+					mes: mes,
+					fecha: fecha,
+					operador_id: codigoOp,
+					producto_id: codigoOp,
+					total_prod: totalProd,
+					total_peso: totalPeso,
+					primeras: primeras,
+					peso_prod_prim: pesoProdPrim,
+					cumplimiento_prim: cumplimientoPrim,
+					segundas: segundas,
+					peso_prod_seg: pesoProdSeg,
+					cumplimiento_seg: cumplimientoSeg,
+					terceras: terceras,
+					peso_prod_ter: pesoProdTer,
+					cumplimiento_ter: cumplimientoTer,
+					paro_id: motivoParo,
+					no_diario: noDiario
+				});
+			}
+			else
+			{
+				alert("Uno o mas campos estan vacios.");
+				window.location="../html/manualForm.html";
+			}
+			
+		}
+	</script>
+
+</html>
