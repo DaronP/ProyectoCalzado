@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>        
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/login.css">
+
+        
+    </head>
+
+    <body>
+        <div class="hdr"></div>
+        <img src="../css/logo.png" alt="" class="logo">
+        <div class="txt">
+            <p>Usuario</p>
+            <input type="text" class="usr" id="email">
+        </div>
+        <div class="txt">
+            <p>Contraseña</p>
+            <input type="password" class="pass" id="passwd">
+        </div>
+        <div class="botones">
+            <input class="log" type="button" value="Ingresar" onclick="checkUser();" id="signIn"/>
+            <input class="reg" type="button" value="Regristrarse"
+            onclick="window.location.href='./SignUp.html'" id="signUp"/>
+        </div>
+    </body>
+    
+    <script type="text/javascript" src="../js/Usuario.js">
+        function checkUser(){
+            var email = document.getElementById('email').value;
+            var passwd = document.getElementById('passwd').value;
+
+            Users.count({where: {email: email, password: passwd}}).then(c => {
+                if(c == 0){
+                    throw error;
+                }
+                else{
+                    console.log("ALV")
+                    console.log(c)
+                    alert("Bienvenido.")
+                    window.location="../html/mainmenu.html"
+                }
+                return c
+            }).catch(err => {
+                alert("Usuario o contraseña equivocado.")
+                return err;
+            })
+            
+        }
+
+    </script>
+
+</html>
