@@ -1,12 +1,22 @@
 const Sequelize = require('sequelize')
 const { QueryTypes } = require('sequelize')
-
+/*
 var db_config ={
     host: 'localhost',
     user: 'root',
     passwor: 'MySQL', //CAMBIAR ESTA CONTRASEÑA
     port: 3306,
     database: 'polimeros'
+}
+*/
+
+//Renato Estrada base de datos, Hola123@
+var db_config ={
+    host: 'localhost',
+    user: 'root',
+    passwor: 'Hola123@', //CAMBIAR ESTA CONTRASEÑA
+    port: 3306,
+    database: 'prensas'
 }
 
 var sequelize = new Sequelize('mysql://'+db_config.user+':'+db_config.passwor

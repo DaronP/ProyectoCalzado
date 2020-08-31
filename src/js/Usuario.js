@@ -15,7 +15,7 @@ var transporter = nodemailer.createTransport({
         pass: ''
     }
 })
-
+/*
  var db_config ={
      host: 'localhost',
      user: 'root',
@@ -23,6 +23,15 @@ var transporter = nodemailer.createTransport({
      port: 3306,
      database: 'users'
  }
+*/
+//Renato Estrada base de datos, Hola123@
+var db_config ={
+    host: 'localhost',
+    user: 'root',
+    passwor: 'Hola123@', //CAMBIAR ESTA CONTRASEÑA
+    port: 3306,
+    database: 'prensas'
+}
 
 
 
