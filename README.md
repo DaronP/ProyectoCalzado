@@ -12,7 +12,10 @@ npm install electron
 Ya descargado electron, podr� iniciar el proyecto con el siguiente comando: 
 
 ```bash
-npm install electron
+npm install
+```
+```bash
+npm start
 ```
 
 ## License
