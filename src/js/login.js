@@ -58,8 +58,11 @@ function checkUser(){
     var passwd = document.getElementById('passwd').value;
 
     Users.count({where: {email: email, password: passwd}}).then(c => {
+        console.log('inicio' + c)
         if(c == 0){
-            throw error;
+            console.log('ingreso' + c)
+
+            dialogs.alert('Ingrese su email y contraseña')
         }
         else{
             console.log("done.")

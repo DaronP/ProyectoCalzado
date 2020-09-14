@@ -71,7 +71,6 @@ const Users = sequelize.define('Usuario',{
 Users.sync()
 
 //Mandando email
-var userCount
 Users.count().then(c => {
     if(c == 0){
         dialogs.alert('El codigo de verificacion es: ' + vCode)
@@ -101,10 +100,6 @@ Users.count().then(c => {
     }
 })
 
-
-if(adMail === null){
-    console.log('Nel mijo')
-}
 
 
 Users.count({where: {firstName: 'admin'}}).then(c => {
