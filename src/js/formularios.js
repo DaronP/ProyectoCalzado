@@ -1,8 +1,9 @@
 const remote = require('electron').remote
 
 const Sequelize = require('sequelize')
-const { QueryTypes } = require('sequelize')
-/*
+var Dialogs = require('dialogs')
+const dialogs = Dialogs()
+
 var db_config ={
     host: 'localhost',
     user: 'root',
@@ -10,8 +11,8 @@ var db_config ={
     port: 3306,
     database: 'prensas'
 }
-*/
 
+/*
 //Renato Estrada base de datos, Hola123@
 var db_config ={
     host: 'localhost',
@@ -20,7 +21,7 @@ var db_config ={
     port: 3306,
     database: 'prensas'
 }
-
+*/
 // var db_config = {
 //     host: 'localhost',
 //     user: 'groot',
@@ -124,9 +125,44 @@ const Vulcanizados = sequelize.define('vulcanizado',{
     
 });
 
+const Operador = sequelize.define('operador',{
+    id:{
+        type: Sequelize.INTEGER,
+        primaryKey: true,
+        autoIncrement: false
+    },
+    nombre:{
+        type: Sequelize.STRING
+    },
+    turno:{
+        type: Sequelize.STRING
+    }
+
+});
 
 Vulcanizados.sync();
+Operador.sync();
 
+//---------------------- Aqui va la progra EDITABLE ---------------------------------
+
+let select = document.getElementById("operador-id")
+Operador.findAll({raw: true, nest: false, attributes:['id']}).then(c => {
+    var vList = []
+    for(var key in c){
+        var dlist = c[key]
+        for(var id in dlist){
+            vList.push(dlist[id])
+        }
+    }
+
+    console.log(vList)
+    for(var i = 0; i < vList.length; i++){
+        var option = document.createElement("OPTION"),
+            txt = document.createTextNode(vList[i]);
+        option.appendChild(txt)
+        select.insertBefore(option, select.lastChild)
+    }
+})
 
 function ingresarFormV(){
     var numeroFormulario = document.getElementById('numero-formulario').value
@@ -193,10 +229,10 @@ function ingresarFormV(){
     }
     else
     {
-        alert("Uno o mas campos estan vacios.");
-        location.reload();
+        dialogs.alert("Uno o mas campos estan vacios.");
+        //location.reload();
     }
 }
 
-document.getElementById("form-button").onClick = ingresarForm;
+document.getElementById("form-button").onClick = ingresarFormV();
 
