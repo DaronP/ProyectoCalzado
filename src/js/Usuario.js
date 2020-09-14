@@ -12,10 +12,10 @@ var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
         user: 'jaandresperez4556@gmail.com',
-        pass: ''
+        pass: 'Tobyhammer1'
     }
 })
-/*
+
  var db_config ={
      host: 'localhost',
      user: 'root',
@@ -23,7 +23,7 @@ var transporter = nodemailer.createTransport({
      port: 3306,
      database: 'users'
  }
-*/
+/*
 //Renato Estrada base de datos, Hola123@
 var db_config ={
     host: 'localhost',
@@ -32,7 +32,7 @@ var db_config ={
     port: 3306,
     database: 'prensas'
 }
-
+*/
 
 
 var sequelize = new Sequelize('mysql://'+db_config.user+':'+db_config.passwor
@@ -71,27 +71,37 @@ const Users = sequelize.define('Usuario',{
 Users.sync()
 
 //Mandando email
-var adMail = Users.findOne({where: {first_name: 'admin'}}).then(c =>{
-    dialogs.alert('Email enviado a: ' + c.email)
-
-    var mailOptions = {
-        from: 'per16362@uvg.edu.gt',
-        to: c.email,
-        subject: 'Codigo de Verificacion',
-        text: 'El codigo de verificacion es: ' + vCode
+var userCount
+Users.count().then(c => {
+    if(c == 0){
+        dialogs.alert('El codigo de verificacion es: ' + vCode)
     }
-    
-    transporter.sendMail(mailOptions, function(error, info){
-        if(error){
-            console.log(error);
-        }else{
-            console.log('Email enviado a: ' + info.response)
+    if(c >= 1){
+        var adMail = Users.findOne({where: {first_name: 'admin'}}).then(c =>{
+            dialogs.alert('Email enviado a: ' + c.email)
+        
+            var mailOptions = {
+                from: 'per16362@uvg.edu.gt',
+                to: c.email,
+                subject: 'Codigo de Verificacion',
+                text: 'El codigo de verificacion es: ' + vCode
+            }
             
-    
-        }
-    });
-    
-});
+            transporter.sendMail(mailOptions, function(error, info){
+                if(error){
+                    console.log(error);
+                }else{
+                    console.log('Email enviado a: ' + info.response)
+                    
+            
+                }
+            });
+            
+        });
+    }
+})
+
+
 if(adMail === null){
     console.log('Nel mijo')
 }
@@ -142,33 +152,11 @@ function addUser(){
     }
 }
 
-function checkUser(){
-    var email = document.getElementById('email').value;
-    var passwd = document.getElementById('passwd').value;
 
-    Users.count({where: {email: email, password: passwd}}).then(c => {
-        if(c == 0){
-            throw error;
-        }
-        else{
-            console.log("done.")
-            console.log(c)
-            alert("Bienvenido.")
-            window.location="../html/mainmenu.html"
-        }
-        return c
-    }).catch(err => {
-        window.location="../html/login.html"
-        alert("Usuario no registrado.")
-        return err;
-    })
-    
-}
 
 
 
 
 
 document.getElementById("Submit").onClick = addUser();
-document.getElementById("signIn").onClick = checkUser();
 
