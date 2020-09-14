@@ -4,7 +4,8 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "test": "ava"
   },
   "author": "",
   "license": "ISC",
@@ -23,5 +24,10 @@
     "sequelize": "^5.21.7",
     "sequelize-models": "^1.4.0",
     "smalltalk": "^4.0.6"
+  },
+  "devDependencies": {
+    "ava": "^3.12.1",
+    "electron-ava": "^0.3.0",
+    "spectron": "^11.1.0"
   }
 }
