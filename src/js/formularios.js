@@ -194,13 +194,13 @@ function ingresarFormV(){
     if(numeroFormulario != "" && fecha != "" && semana != "" && mes != "" && codigoOperador != "" && codigoProducto != "" && codigoPrensa != "" && cargasProgram != "" && productoDefecto != "" && buenEstado != "" && totalCargas != "" && cargasFaltantes != "" && porcentajeCumpTotal != "" && porcentajeBuenEstado != "" && pesoProducir != "" && pesoProducido != "" && faltante != "" && rebaba != "" && porcentajeRebaba != "" && cumplimientoKg != "" && paroId != "" && tiempoReal != "" && tiempoNoUtilizado != "" && kwh != "")
     {
         Vulcanizados.create({
-            numero_formulario : numeroFormulario,
+            id : numeroFormulario,
             fecha : fecha,
             semana : semana,
             mes : mes,
-            codigo_operador : codigoOperador,
-            codigo_producto : codigoProducto,
-            codigo_prensa : codigoPrensa,
+            operador_id: codigoOperador,
+            prensa_id: codigoPrensa,
+            producto_id: codigoProducto,
             cargas_program : cargasProgram,
             producto_defecto : productoDefecto,
             buen_estado : buenEstado,
