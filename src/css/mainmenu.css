@@ -1,7 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 
-
-body {
+html ,body {
     display: flex;
+    background: none;
+    height: 100%;
+    width: 100%;
 }
 
 .board {
@@ -60,4 +66,142 @@ button{
     font-weight: bold;
     margin-left: 1rem;
     margin-right: 2rem;
+}
+
+aside{
+    position: relative;
+    background: #51D146;
+    width: 175px;
+    height: 100%;
+    
+}
+
+.cuadro{
+    position: absolute;
+    background:white;
+    width: 325px;
+    height: 425px;
+    top: 230px
+}
+
+.box{
+    background:white;
+    width: 131px;
+    height: 131px;
+}
+
+.Circle{
+    width: 110px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #4db8ff;
+    border-radius: 100%;
+    position: absolute;
+    top: 15px;
+}
+
+.circular--portrait {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 100%;
+}
+
+.profileName {
+    font-family: "Roboto";
+    color: #ffffff;
+}
+
+.topo{
+    top: 15px
+}
+
+.space {
+    margin-top: 15px;
+    display: grid;
+    justify-content: center;
+    grid-row-gap: 35px;
+    grid-auto-flow: row;
+    align-items: center;
+    padding-left: 10px;
+}
+
+nav{
+    background: rgba(90, 176, 255, 0.4);
+    width: 100%; 
+    height: 131px;
+}
+
+.pageTitle{
+    width: 725px; 
+    height: 58px;
+    background: rgba(90, 176, 255, 1);
+}
+
+.txtpageTitle{
+    font-family: "Roboto";
+    color: #ffffff;
+    font-size: 48px;
+    text-align: center;
+}
+
+.search-box{
+    position: relative;
+    background: white;
+    height: 26px;
+    border-radius: 40px;
+    padding: 10px;
+    top: 15px;
+    left: 100px;
+    width: 707px;
+}
+.search-btn{
+    color: #e84118;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: black;
+    font-size: 18px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 500px;
+}
+
+.items{
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+section{
+    display: grid;
+    top: 170px;
+    position: absolute;
+    grid-template-columns: 600px 400px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    left: 220px;
+    border-radius: 10%;
+}
+
+.graficos{
+    width: 581px;
+    height: 250px;
 }
