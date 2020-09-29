@@ -5,7 +5,7 @@ const electronPath = require('electron') // Require Electron from the binaries i
 const path = require('path')
 
 var app;
-const timeout = 10000;
+const timeout = 9000;
 
 //Application gets started before Tests
 test.before(t => {
