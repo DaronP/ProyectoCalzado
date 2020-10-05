@@ -1,8 +1,8 @@
 const test = require('ava');
-const Application = require('spectron').Application
-const assert = require('assert')
-const electronPath = require('electron') // Require Electron from the binaries included in node_modules.
-const path = require('path')
+const Application = require('spectron').Application;
+const assert = require('assert');
+const electronPath = require('electron');// Require Electron from the binaries included in node_modules.
+const path = require('path'); // .proyectocalzado/test.js
 
 var app;
 const timeout = 9000;
@@ -11,9 +11,7 @@ const timeout = 9000;
 test.before(t => {
     app = new Application({
         path: electronPath,
-        args: ['main.js'],
-        startTimeout: timeout,
-        waitTimeout: timeout,
+        args: ['main.js']
     })
 
     return app.start()
@@ -24,12 +22,32 @@ test.after(t => {
     if (app && app.isRunning()) {
         return app.stop()
     }
-}); 
+});
 
-test('Window was launched', async t => {
+test.failing('HTML was loaded for Login', async t => {
+    t.is(await app.client.getTitle(), 'login.html')
+});
+
+/*
+test('Window was launched', async t => {    
     t.is(await app.client.getWindowCount(), 1)
 });
 
-test('HTML was loaded', async t => {
-    t.is(await app.client.getTitle(), 'Title of my HTML-file')
+
+
+test.failing('HTML was loaded for SignUp', async t => {
+    t.is(await app.client.getTitle(), 'SignUp.html')
 });
+
+test.failing('HTML was loaded for Salary', async t => {
+    t.is(await app.client.getTitle(), 'salary.html')
+});
+
+test.failing('HTML was loaded for Main Menu', async t => {
+    t.is(await app.client.getTitle(), 'mainmenu.html')
+});
+
+test('')
+*/
+
+

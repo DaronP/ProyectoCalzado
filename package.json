@@ -5,8 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "test": "ava",
-    "testgui": "selenium-webdriver"
+    "test": "ava"
   },
   "author": "",
   "license": "ISC",

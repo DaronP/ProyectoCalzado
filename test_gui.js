@@ -1,3 +1,4 @@
+/*
 const webdriver = require('selenium-webdriver')
 
 const driver = new webdriver.Builder()
@@ -6,7 +7,7 @@ const driver = new webdriver.Builder()
   .withCapabilities({
     chromeOptions: {
       // Here is the path to your Electron binary.
-      binary: '/Path-to-Your-App.app/Contents/MacOS/Electron'
+      binary: './node_modules/.bin/electron'
     }
   })
   .forBrowser('electron')
@@ -22,3 +23,4 @@ driver.wait(() => {
 }, 1000)
 
 driver.quit()
+*/
