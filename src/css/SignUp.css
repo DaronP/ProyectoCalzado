@@ -8,7 +8,7 @@ body{
     font-family: Helvetica;
 }
 .green{
-    background: #51D146;
+    background: #00CA36;
     width: 100%;
     height: 120px;
     display: flex;
@@ -18,28 +18,22 @@ body{
 input, label {
     display:block;
 }
+
 .cuadrado{
 height: 60%;
 width: 40%;
-position: absolute;
 border-radius: 5%;
 padding: 80px 40px;
-top: 50%;
-left: 50%;
-transform: translate(-50%,-50%);
 display: block;
 justify-content: center;
 align-items: center;
-}
-.cuadrado form img{
-    position: relative;
-    height: 150px;
-    margin: 20px 20px 0px 20px;
+margin-left: auto;
+margin-right: auto;
 }
 .txtb{
     border-bottom: 2px solid #adadad;
     position: relative;
-    margin: 10px 0;
+    margin-bottom: 30px;
 }
 .txtb input{
     font-size: 15px;
@@ -123,7 +117,6 @@ button:hover::after{
 }*/
 
 .sub{
-    position: relative;
     width: 150px;
     height: 60px;
     border-radius: 5%;
@@ -133,8 +126,9 @@ button:hover::after{
     margin-left: 1rem;
     margin-right: 2rem;
     font-size: 18px;
-    top: 650px;
-    left: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
 }
 img{
     display: block;

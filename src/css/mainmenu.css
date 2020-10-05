@@ -70,7 +70,7 @@ button{
 
 aside{
     position: relative;
-    background: #51D146;
+    background: #00CA36;
     width: 175px;
     height: 100%;
     
@@ -138,7 +138,7 @@ nav{
 .pageTitle{
     width: 725px; 
     height: 58px;
-    background: rgba(90, 176, 255, 1);
+    background: #5AB0FF;
 }
 
 .txtpageTitle{
