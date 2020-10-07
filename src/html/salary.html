@@ -1,55 +1,88 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-	<head>
-			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-			<link rel="stylesheet" href="../css/normalize.css">
-      <link rel="stylesheet" href="../css/salary.css">
-			<title>Salarios</title>
-	</head>
-	<body>
-		<div class="Pagina__principal">
-			<div class="Contenido">
-				<div class="menu_de_opciones">
-					<ul style="list-style-type:none;">
-						<li><div class="usuario__imagen"></div></li>
-						<li><div class="scanner__imagen"></div></li>
-						<li><div class="dinero__imagen"></div></li>
-						<li><div class="estadisticas__imagen"></div></li>
-					</ul>
-					<div class="menu_de_opciones__pie_de_pagina">
-						<div class="salir__imagen"></div>
-					</div>
-				</div>
-				<div class="Contenido__principal">
-					<div class="Encabezado__contenido">
-						<div class="Cuadro_de_titulo">
-							<h2>Generar Salario</h2>
-						</div>
-					</div>
-					<div class="Formulario">
-						<h1>Salario</h1>
-						<div class="Cuadro_de_ingreso">
-							<h3>Operador:</h3>
-							<div class="placeholder"></div>
-							<div class="fechas_holder">
-								<div class="fecha_inicio">
-									<h3>Fecha Inicio:</h3>
-									<div class="placeholder"></div>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/salary.css">
+    </head>
+
+    <body>
+        <aside>
+            <div class="space">
+                <div class="topo">
+                    <input type="image" class="circular--portrait" src="../css/WhatsApp Image 2020-07-15 at 1.01.12 PM.jpg">
+                    <p class="profileName">Renato Estrada</p>
+                </div>
+                <input id="opcion" type="image" class="items" src="../css/icons8-report-file-80.png" value="0" onclick="window.location.href='./informes.html'">
+                <input id="opcion" type="image" class="items" src="../css/icons8-bar-chart-80.png" value="1" onclick="window.location.href='./mainmenu.html'"> 
+                <input id="opcion" type="image" class="items" src="../css/icons8-print-80.png" value="2">
+                <input id="opcion" type="image" class="items" src="../css/icons8-user-male-128.png" value="3">
+                <input id="opcion" type="image" class="items" src="../css/icons8-exit-96.png" value="4" onclick="window.location.href='./login.html'">
+            </div>
+        </aside>
+        <div class="cuerpo">
+            <nav>
+                <div class="pageTitle">
+                    <p class="txtpageTitle">Generar salario</p>       
+                </div>
+            </nav>
+            <div class="bodyF">
+                <h2 class="centerP">Salario</h2>
+                <div class="cuadrado">  
+                    <form action="index.html">
+                            
+                        <div class="txtb">
+                            <p class="correr">Operador:</p>
+                            <input type="number" id="numero-formulario" min="0" class="sizeF">
+                        </div>
+
+						<div class="botones">
+							<div class="columna">
+								<div class="txtb">
+									<p class="correr2">Fecha inicial:</p>
+									<input type="date" id="fecha" class="sizeF2">
 								</div>
-								
-								<div class="fecha_final">
-									<h3>Fecha Final:</h3>
-									<div class="placeholder"></div>
-								</div>
-								
 							</div>
-							<h3>Salario:</h3>
-							<div class="placeholder"></div>
-							<button class="Generar_salario">Generar Salario</button>
+							
+							<div class="columna">
+								<div class="txtb">
+									<p>Fecha final:</p>
+									<input type="date" id="fecha" class="sizeF3">
+								</div>	
+							</div>
+							
 						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</body>
+                        
+                        <div class="txtb">
+                            <p class="correr">Tipo de formulario:</p>
+                            <select id="tipoF" class="sizeF">
+                                <option value=" "> </option>
+                                <option value="0">Vulcanizado</option>
+                                <option value="1">Empaque</option>
+                            </select>
+                        </div>              
+                        <input type="button" id="Submit" value="Generar formulario" class="sub" onclick="generarInforme()">       
+                    </form>
+                </div>        
+            </div>
+        </div>
+        <script>
+            function generarInforme(){
+                var tipoInforme = document.getElementById('tipoF').value;
+                if(tipoInforme === '0'){
+                    window.location.href = "vulcanizado.html";
+                }else if(tipoInforme === '1'){
+                    window.location.href = ("manualForm.html");
+                }else{
+                    alert("Por favor seleccione un tipo de formulario");
+                }
+            }
+
+            function quit(){
+                const { app } = require('electron')
+                app.on('window-all-closed', () => {
+                    app.quit()
+                })
+            }
+        </script>
+    </body>
 </html>

@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html ,body {
+    background: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.board {
+    background: darkcyan;
+}
+
+aside{
+    background: #00CA36;
+    width: 150px;
+    height: 100%;
+}
+
+.circular--portrait {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 100%;
+    margin-bottom: 5px;
+}
+
+.profileName {
+    font-family: "Roboto";
+    color: #ffffff;
+}
+
+.space {
+    display: flex;
+    flex-direction: column;
+}
+
+.items{
+    width: 80px;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+}
+
+.pageTitle{
+    width: 725px; 
+    height: 58px;
+    background: #5AB0FF;
+}
+
+.txtpageTitle{
+    font-family: "Roboto";
+    color: #ffffff;
+    font-size: 48px;
+    text-align: center;
+}
+
+nav{
+    background: rgba(90, 176, 255, 0.49);
+    width: 100%; 
+    height: 131px;
+    display: flex;
+}
+
+.cuadrado{
+    height: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #C4C4C4;
+    width: 760px;
+    padding: 60px 40px;
+}
+/*
+.bodyF{
+    margin-top: 170px;
+    left: 400px;
+    width: 800px;
+}
+*/
+.sub{
+    width: 220px;
+    height: 50px;
+    border-radius: 5%;
+    background-color: #66a5ec;
+    border: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.topo{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.sizeF{
+    width: 80%;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    display: block;
+}
+
+.centerP{
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+.correr{
+    margin-left: 10%;
+}
+
+input{
+    text-align: center;
+    font-size: 20px;
+}
+
+.cuerpo{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}

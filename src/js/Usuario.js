@@ -30,7 +30,7 @@ var db_config ={
     user: 'root',
     passwor: 'Hola123@', //CAMBIAR ESTA CONTRASEÑA
     port: 3306,
-    database: 'prensas'
+    database: 'users'
 }
 */
 

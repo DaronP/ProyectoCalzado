@@ -46,8 +46,6 @@ html ,body {
     height: 100%;
 }
 
-
-
 .button-containers {
     padding: 1rem;
     align-items: center;
@@ -71,7 +69,7 @@ button{
 aside{
     position: relative;
     background: #00CA36;
-    width: 175px;
+    width: 155px;
     height: 100%;
     
 }
@@ -90,24 +88,13 @@ aside{
     height: 131px;
 }
 
-.Circle{
-    width: 110px;
-    height: 110px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #4db8ff;
-    border-radius: 100%;
-    position: absolute;
-    top: 15px;
-}
-
 .circular--portrait {
     position: relative;
     width: 80px;
     height: 80px;
     overflow: hidden;
     border-radius: 100%;
+    margin-bottom: 5px;
 }
 
 .profileName {
@@ -116,17 +103,17 @@ aside{
 }
 
 .topo{
-    top: 15px
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
 }
 
 .space {
-    margin-top: 15px;
-    display: grid;
-    justify-content: center;
-    grid-row-gap: 35px;
-    grid-auto-flow: row;
-    align-items: center;
-    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 nav{
@@ -185,23 +172,29 @@ nav{
 }
 
 .items{
-    position: relative;
     width: 80px;
     height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
 }
 
 section{
     display: grid;
-    top: 170px;
-    position: absolute;
-    grid-template-columns: 600px 400px;
+    grid-template-columns: 600px 600px;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
-    left: 220px;
     border-radius: 10%;
+    margin: auto;
 }
 
 .graficos{
     width: 581px;
     height: 250px;
+}
+
+.cuerpo{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }

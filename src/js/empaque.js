@@ -16,7 +16,7 @@ var db_config ={
     user: 'root',
     passwor: 'Hola123@', //CAMBIAR ESTA CONTRASEÑA
     port: 3306,
-    database: 'prensas'
+    database: 'polimeros'
 }
 */
 var sequelize = new Sequelize('mysql://'+db_config.user+':'+db_config.passwor
