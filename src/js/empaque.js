@@ -9,6 +9,7 @@ var db_config ={
     database: 'polimeros'
 }
 
+
 /*
 //Renato Estrada base de datos, Hola123@
 var db_config ={
